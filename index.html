@@ -23,10 +23,10 @@
             </div>
             <div class="thumbs">
 
-                <div class="prev" @click="imgNumberUp"></div>
-                <div class="next" @click="imgNumberDown"></div>
+                <div class="prev" @click="imgNumberDown"></div>
+                <div class="next" @click="imgNumberUp"></div>
                 
-                <div v-for="(item, index) in items" class="thumb active">
+                <div v-for="(item, index) in items" :class="index==active?'active':''" class="thumb">
                     <img :src="items[index].url" alt="">
                 </div> 
                 
