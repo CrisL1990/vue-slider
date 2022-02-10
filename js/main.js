@@ -40,6 +40,31 @@ const root = new Vue(
             active: 0
         },
 
+     
+        
+
+        methods: {
+            imgNumberUp: function(){
+
+                if(this.active >= this.items.length - 1){
+                    this.active = 0;
+                }else{
+                    this.active++;
+                }
+                 
+            },
+
+            imgNumberDown: function(){
+
+                if(this.active <= 0){
+                    this.active = this.items.length - 1;
+                }else{
+                    this.active--;
+                }
+                 
+            }, 
+        }
+
         
     }   
 );
